@@ -135,11 +135,8 @@
 
 .score_component{
     background-color: rgb(134, 87, 29);
-    /* color: gold; */
     width: 100%;
     height: 50%;
-    
-
 }
 
 
@@ -151,31 +148,19 @@
 }
 
 .column{
-    
     display: flex; 
      flex-direction: column;
-     /* gap:2vw; */
      border: 1px solid black;
 }
 
 .roww{
-    /* background-color: blue; */
-    /* height: 5vw;  */
-    /* height: auto; */
     height: 15vw;
      width: 5vw;
-    /* align-items: center;
-    justify-content: center; */
-    /* text-align: center; */
-    /* padding-left: 2vw; */
     border-bottom: 1px solid black;
 }
 
 .first_row{
-    /* display: inline-block; */
     height: 2vw;
-    
-    /* align-items: center; */
     justify-content: center;
     text-align: center;
 }
@@ -183,29 +168,15 @@
 .second_row{
     display: flex;
     flex-direction: row;
-    /* top: 50%; */
-    /* width: 5vw; */
     height: 100%;
-    /* align-items: center;
-    justify-content: center; */
-    
-    /* text-align: center; */
-    /* gap: 1vw; */
 }
 
 .second_row_split{
     display: flex;
-    /* position:initial; */
-    /* margin: 5%; */
     width: 100%; 
      width: 100%;
-    /* height: 100%; */
      align-items: center;
     justify-content: center; 
-    /* border:1px solid black; */
-    /* text-align: center; */
-    /* padding: 0.5vw; */
-    /* gap: 4vw; */
 
 }
 
@@ -221,11 +192,8 @@
 
 .values{
     display: flex;
-    /* width: 100%; */
     position: relative;
-    /* height: 5%; */
     align-items: center;
-    /* justify-content: center; */
     padding: 5%;
     gap: 1vw;
 
@@ -244,7 +212,6 @@ button{
     border-radius: 20%;
     border: 1px solid black;
     text-align: center;
-    /* padding: 5%; */
     margin: 5%;
     
 }
@@ -257,6 +224,5 @@ ul{
     
     height: 100%;
     background-color: bisque;
-    /* justify-content: center; */
     border-radius: 10%;
 }   

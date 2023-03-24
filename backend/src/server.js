@@ -9,44 +9,32 @@ app.use(cors({credentials: true,origin:["http://localhost:4200"]}))
 app.use(express.json());
 
 app.get("/api/players/all",(req,res) => {
-    // console.log("--GET ALL PLAYERS-----------------------");
     res.send(player_data);
 })
 
 app.post('/api/player/create',(req,res) => {
-    // console.log("CREATE NEW PLAYER WITH OBJECT-----------------------");
-    // console.log(req.body.playerObj);
     player_data.push(req.body.playerObj);
     res.send(player_data);
-
 })
 
 
 app.post("/api/player/frame/update",(req,res) => {
-    // console.log("UPDATE FRAME-----------------------");
     if(player_data[req.body.playerId-1].frame_number-1!=10){
         player_data[req.body.playerId-1].resalt_table[player_data[req.body.playerId-1].frame_number-1]=req.body.frameData;
         player_data[req.body.playerId-1].frame_number++;
     }
-    // console.log(player_data[req.body.playerId-1])
     res.send(player_data)
-
 })
 
 
 app.delete("/api/players/delete/all",(req,res) => {
-    // console.log("--Delete ALL PLAYERS-----------------------");
-    player_data = new Array();
-    // res.send()s
-    
+    player_data = new Array();   
 })
 
 
 
 app.get("/api/get/score",(req,res) => {
-    // console.log("--GET SCORE-----------------------");
     player_data.forEach(player=>{calc_score(player);});
-    // console.log(player_data)
     res.send(player_data)  
 })
 
@@ -57,7 +45,6 @@ function calc_score(player){
     for(var i=0;i<(player.resalt_table.length-1);i++){
         var local_sum=0;
         for(var j=0;j<((player.resalt_table[i].length));j++){
-            // console.log(player.resalt_table[i])
             if(player.resalt_table[i][0]===''){
                 break;
             }
@@ -90,44 +77,7 @@ function calc_score(player){
         }
     });
     player.score[9]=tatal_score;
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

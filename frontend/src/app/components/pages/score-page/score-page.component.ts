@@ -13,17 +13,12 @@ export class ScorePageComponent implements OnInit {
   constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
-    // console.log("ScorePageComponent")
     this.dataService.getScore().subscribe(players =>this.mySort(this.players =players));
-    // this.dataService.getScore().subscribe(players =>this.players =players);
-    // console.log(this.players)
- 
   }
 
 
   mySort(players:Player[]){
     players.sort((a,b) => (a.score[a.score.length-1] > b.score[b.score.length-1]) ? 1 : ((b.score[b.score.length-1] > a.score[a.score.length-1]) ? 1 : 0))
-    // console.log(this.players[0].score)
   }
 
 }

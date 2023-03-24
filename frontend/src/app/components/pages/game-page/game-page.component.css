@@ -114,9 +114,6 @@ align-items: center;
         align-items: center;
         padding: 1vw;
         gap: 0.9vw;
-        /* border-right: 1px solid black;
-        border-left: 1px solid black;
-        border-bottom: 1px solid black; */
     }
 
     button{

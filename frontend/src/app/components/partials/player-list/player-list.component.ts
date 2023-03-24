@@ -9,12 +9,10 @@ import { Player } from 'src/app/shared/models/player';
 export class PlayerListComponent implements OnInit {
   @Input() players:Player[]=[];
   @Output("updateCorentPlayer") newItemEvent = new EventEmitter<Player>();
-  // current_player?:Player;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   updateCorentPlayer(value:Player){
     this.newItemEvent.emit(value);

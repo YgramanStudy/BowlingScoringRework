@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 import { Player } from 'src/app/shared/models/player';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-game-page',
@@ -16,11 +15,7 @@ export class GamePageComponent implements OnInit {
   resalts_arr!:number[];
   extra_turn!:boolean[];
 
-  constructor(private dataService:DataService,
-              private router: Router,
-              private activatedRoute:ActivatedRoute,) { 
-                
-              }
+  constructor(private dataService:DataService,) {}
 
   ngOnInit(): void {
 
@@ -48,9 +43,7 @@ export class GamePageComponent implements OnInit {
 
 
   updateFreame(frame_resalts:number[]){   
-    // this.dataService.updateFrame(this.current_player.id,frame_resalts).subscribe(player =>this.current_player =player);
     this.dataService.updateFrame(this.current_player.id,frame_resalts).subscribe(players =>this.updateCurrentPlayer(this.players =players));
-    // this.current_player=this.players[this.current_player.id-1]
   }
 
   updateCurrentPlayer(player:Player[]){
@@ -79,7 +72,6 @@ export class GamePageComponent implements OnInit {
       let amount_to_undisable=11;
       if(!this.resalts_arr.length){
         this.resalts_arr.push(buttom_number);
-        // console.log(buttom_number)
         if(buttom_number==10){
           this.extra_turn[this.current_player.id-1]=true;
           this.button_logic(0);
@@ -95,17 +87,14 @@ export class GamePageComponent implements OnInit {
           this.extra_turn[this.current_player.id-1]=true;
         }
         this.button_logic(buttom_number);
-        // console.log(buttom_number)
       }
     }
 
-    // console.log(this.button_undisabling);
   }
 
   button_logic(buttom_number:number){
     this.resalts_arr.push(buttom_number);
     this.updateFreame(this.resalts_arr);
-    // this.button_undisabling.fill(true);
     this.resalts_arr = [];
   }
 

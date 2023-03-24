@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Player } from 'src/app/shared/models/player';
 import { DataService } from 'src/app/services/data.service';
 
@@ -10,23 +9,14 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class StartPageComponent implements OnInit {
 
-  // players:Player[] = [];
-  // score:Score=new Score();
-  // id:number =1;
-
   corent_player!:Player;
   
-  constructor(
-    private dataService:DataService,
-    private router: Router,
-    private activatedRoute:ActivatedRoute,
-    ) {}
+  constructor(private dataService:DataService,) {}
 
    
 
   ngOnInit(): void {
     this.dataService.deletePlayers().subscribe();
-    // this.dataService.startNewGame().subscribe();
   }
 
 

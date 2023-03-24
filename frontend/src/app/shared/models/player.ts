@@ -4,7 +4,6 @@ export class Player{
     frame_number!:number;
     resalt_table:any[]=Array(9).fill(["",""]);
     score:number[]=Array(10);
-    // extra_turn:boolean=false;
 
     
     constructor(id:number,name:string){
