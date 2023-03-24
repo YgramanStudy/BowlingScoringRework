@@ -1,0 +1,24 @@
+button {
+    display: inline;
+    background-color: red;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative; 
+  }
+  
+  button:before {
+    content: ""; 
+    position: absolute; 
+    top: 50%; 
+    left: 10px; 
+    margin-top: -3px; 
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent; 
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid white; 
+  }

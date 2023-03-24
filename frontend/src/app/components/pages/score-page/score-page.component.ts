@@ -17,8 +17,12 @@ export class ScorePageComponent implements OnInit {
   }
 
 
-  mySort(players:Player[]){
-    players.sort((a,b) => (a.score[a.score.length-1] > b.score[b.score.length-1]) ? 1 : ((b.score[b.score.length-1] > a.score[a.score.length-1]) ? 1 : 0))
+  mySort(players: Player[]) {
+    players.sort((a, b) => {
+      const totalScoreA = a.score.reduce((acc, val) => acc + val, 0);
+      const totalScoreB = b.score.reduce((acc, val) => acc + val, 0);
+      return totalScoreB - totalScoreA;
+    });
   }
 
 }

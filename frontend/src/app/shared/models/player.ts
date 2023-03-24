@@ -10,9 +10,7 @@ export class Player{
         this.id=id;
         this.name=name;
         this.frame_number=1;
-        this.resalt_table[9]=["","",""]
-
-       
+        this.resalt_table[9]=["","",""]  
     }
 
     

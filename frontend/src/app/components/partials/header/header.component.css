@@ -1,6 +1,10 @@
 header{
     position: relative;
     border-bottom: 1px solid red;
+    display: flex;
+    height: auto;
+    justify-content:space-between;
+    align-items: center;
 }
 
 .header-container{
@@ -11,8 +15,9 @@ header{
 }
 
 a{
+    
     font-size: 2vw;
-    color: blueviolet;
+    color: red;
     font-weight: bold;
     padding: 1vw;
 }
@@ -22,6 +27,14 @@ a:hover{
     color: aliceblue;
     cursor: pointer;
 }
+
+app-go-back{
+
+    height: 1;
+    width: 10vw;
+    
+}
+
 
 @media screen and (min-width: 768px) {
     .header-container {

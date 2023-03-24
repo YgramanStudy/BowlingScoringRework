@@ -11,6 +11,7 @@ import { ScorePageComponent } from './components/pages/score-page/score-page.com
 import { HeaderComponent } from './components/partials/header/header.component';
 import { PlayerListComponent } from './components/partials/player-list/player-list.component';
 import { GameBoardComponent } from './components/partials/game-board/game-board.component';
+import { GoBackComponent } from './components/partials/go-back/go-back.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { GameBoardComponent } from './components/partials/game-board/game-board.
     ScorePageComponent,
     HeaderComponent,
     PlayerListComponent,
-    GameBoardComponent
+    GameBoardComponent,
+    GoBackComponent
   ],
   imports: [
     BrowserModule,

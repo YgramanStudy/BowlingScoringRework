@@ -1,11 +1,12 @@
 <div class="start_game_page_container">
     <div class="game_page_player_list">
+        <h1>Please select a player</h1>
         <app-player-list class="game_page_player_list" [players]="players"  (updateCorentPlayer)="updateCorentPlayer($event)" ></app-player-list>
     </div>
     <div class="game_page_game_board">
         <ng-container class="ng_container" *ngIf="current_player" >
             <div class="app-score-table">
-                <h1>CURRENT PLAYER {{current_player.name}}</h1>
+                <h1>Current player :  {{current_player.name}}</h1>
                 <div class="score_component">
                     <app-game-board [current_player]="current_player"></app-game-board>
                     <div class="values">

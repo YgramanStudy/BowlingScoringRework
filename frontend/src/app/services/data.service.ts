@@ -26,14 +26,10 @@ export class DataService {
       return this.http.get<Player[]>(PLAYERS_URL);
   }
 
- 
-
   // by object
   createNewPlayer(player:Player):Observable<Player[]>{
     return this.http.post<Player[]>(CREATE_PLAYER_URL,{"playerObj":player,httpOptions,});
   }
-
-
 
   deletePlayers():Observable<any>{
     return this.http.delete<any>(DELETE_ALL_PLAYERS_URL).pipe(delay(10));   
@@ -48,13 +44,6 @@ export class DataService {
     return this.http.get<Player[]>(GET_SCORE_URL);
   }
 
-
-  
-
-  
-
 }
-// function firstValueOf(arg0: Observable<Player[]>): Player[] | PromiseLike<Player[]> {
-//   throw new Error('Function not implemented.');
-// }
+
 

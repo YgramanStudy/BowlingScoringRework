@@ -46,51 +46,58 @@ export class GamePageComponent implements OnInit {
     this.dataService.updateFrame(this.current_player.id,frame_resalts).subscribe(players =>this.updateCurrentPlayer(this.players =players));
   }
 
-  updateCurrentPlayer(player:Player[]){
-    this.current_player=this.players[this.current_player.id-1]
+  updateCurrentPlayer(players: Player[]) {
+    this.current_player = players.find(p => p.id === this.current_player.id)!;
     this.button_undisabling.fill(true);
   }
+  
 
 
-  onSubmitButton(buttom_number:number){
-    if(this.current_player.frame_number==10){
-      if(!this.resalts_arr.length){
-        this.resalts_arr.push(buttom_number);
-      }
-      else if(this.extra_turn[this.current_player.id-1]==false){
-        this.button_logic(buttom_number);
-      }
-      else if(this.resalts_arr.length<2){
-        this.resalts_arr.push(buttom_number);
-      }
-      else{
-        this.button_logic(buttom_number);
-      }
-      
+  
+
+  private handleFirstRoll(buttom_number: number): void {
+    this.resalts_arr.push(buttom_number);
+    if (buttom_number === 10) {
+      this.extra_turn[this.current_player.id - 1] = true;
+      this.button_logic(0);
     }
-    else{
-      let amount_to_undisable=11;
-      if(!this.resalts_arr.length){
-        this.resalts_arr.push(buttom_number);
-        if(buttom_number==10){
-          this.extra_turn[this.current_player.id-1]=true;
-          this.button_logic(0);
-        }
-        amount_to_undisable = amount_to_undisable - buttom_number;
-        for(let i=11; i>amount_to_undisable;i--){
-          this.button_undisabling[i-1]=false;
-        }
-      }
-      
-      else{
-        if(this.resalts_arr[0]+buttom_number==10){
-          this.extra_turn[this.current_player.id-1]=true;
-        }
-        this.button_logic(buttom_number);
-      }
+    const amount_to_undisable = 11 - buttom_number;
+    for (let i = 11; i > amount_to_undisable; i--) {
+      this.button_undisabling[i - 1] = false;
     }
-
   }
+  
+
+  private handleSecondRoll(buttom_number: number): void {
+    this.resalts_arr.push(buttom_number);
+    if (this.resalts_arr[0] + buttom_number === 10) {
+      this.extra_turn[this.current_player.id - 1] = true;
+    }
+    this.button_logic(buttom_number);
+  }
+  
+
+  public onSubmitButton(buttom_number: number): void {
+    if (this.current_player.frame_number === 10) {
+      if (!this.resalts_arr.length) {
+        this.resalts_arr.push(buttom_number);
+      } else if (this.extra_turn[this.current_player.id - 1] === false) {
+        this.button_logic(buttom_number);
+      } else if (this.resalts_arr.length < 2) {
+        this.resalts_arr.push(buttom_number);
+      } else {
+        this.button_logic(buttom_number);
+      }
+    } else {
+      if (!this.resalts_arr.length) {
+        this.handleFirstRoll(buttom_number);
+      } else {
+        this.handleSecondRoll(buttom_number);
+      }
+    }
+  }
+  
+
 
   button_logic(buttom_number:number){
     this.resalts_arr.push(buttom_number);
