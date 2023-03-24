@@ -23,7 +23,7 @@ export class ScorePageComponent implements OnInit {
 
   mySort(players:Player[]){
     players.sort((a,b) => (a.score[a.score.length-1] > b.score[b.score.length-1]) ? 1 : ((b.score[b.score.length-1] > a.score[a.score.length-1]) ? -1 : 0))
-    // console.log(this.players)
+    // console.log(this.players[0].score)
   }
 
 }

@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class GamePageComponent implements OnInit {
   players:Player[] = [];
   current_player!:Player;
-  button_undisabling= Array(10);
+  button_undisabling= Array(11);
   button_numbers= Array(11).fill(0).map((x,i)=>i + 1);
   resalts_arr!:number[];
   extra_turn!:boolean[];
@@ -76,15 +76,16 @@ export class GamePageComponent implements OnInit {
       
     }
     else{
-      let amount_to_undisable=10;
+      let amount_to_undisable=11;
       if(!this.resalts_arr.length){
         this.resalts_arr.push(buttom_number);
+        console.log(buttom_number)
         if(buttom_number==10){
           this.extra_turn[this.current_player.id-1]=true;
           this.button_logic(0);
         }
         amount_to_undisable = amount_to_undisable - buttom_number;
-        for(let i=10; i>amount_to_undisable;i--){
+        for(let i=11; i>amount_to_undisable;i--){
           this.button_undisabling[i-1]=false;
         }
       }
@@ -94,6 +95,7 @@ export class GamePageComponent implements OnInit {
           this.extra_turn[this.current_player.id-1]=true;
         }
         this.button_logic(buttom_number);
+        console.log(buttom_number)
       }
     }
 
