@@ -11,7 +11,7 @@
                     <div class="values">
                         <div  *ngFor="let number of button_numbers" >
                             <ng-container *ngIf="!button_undisabling[number-1]; else elseBlock">
-                                <button class="score_btn" disabled type="button" (click)="onSubmitButton(number-1)" >{{number-1}}</button>
+                                <button class="score_btn disabled" disabled type="button" (click)="onSubmitButton(number-1)" >{{number-1}}</button>
                             </ng-container>
                             <ng-template #elseBlock>
                                 <button class="score_btn" type="button" (click)="onSubmitButton(number-1)" >{{number-1}}</button>

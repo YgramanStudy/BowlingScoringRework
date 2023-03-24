@@ -130,6 +130,12 @@ align-items: center;
         color: red;
     }
 
+    .disabled{
+        background-color: white;
+        border: none;
+        color: white;
+    }
+
     .score_page_btn {
         font-size: 1.8vw;
         border-radius: 5vw;

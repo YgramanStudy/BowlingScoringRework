@@ -79,7 +79,7 @@ export class GamePageComponent implements OnInit {
       let amount_to_undisable=11;
       if(!this.resalts_arr.length){
         this.resalts_arr.push(buttom_number);
-        console.log(buttom_number)
+        // console.log(buttom_number)
         if(buttom_number==10){
           this.extra_turn[this.current_player.id-1]=true;
           this.button_logic(0);
@@ -95,7 +95,7 @@ export class GamePageComponent implements OnInit {
           this.extra_turn[this.current_player.id-1]=true;
         }
         this.button_logic(buttom_number);
-        console.log(buttom_number)
+        // console.log(buttom_number)
       }
     }
 
