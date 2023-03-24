@@ -12,7 +12,7 @@ export class GamePageComponent implements OnInit {
   players:Player[] = [];
   current_player!:Player;
   button_undisabling= Array(10);
-  button_numbers= Array(10).fill(1).map((x,i)=>i + 1);
+  button_numbers= Array(11).fill(0).map((x,i)=>i + 1);
   resalts_arr!:number[];
   extra_turn!:boolean[];
 

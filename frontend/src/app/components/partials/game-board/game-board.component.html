@@ -5,10 +5,11 @@
             <div class="second_row roww">
                 <div class="second_row_split" >{{frame[0]}}</div>
                 <div class="second_row_split extra_border">{{frame[1]}}</div>
-                <div class="second_row_split extra_border" *ngIf="frame[2]">
+                <div class="second_row_split extra_border" *ngIf="i==9">
                     <ng-container class="second_row_split" *ngIf="frame[2]">
                         {{frame[2]}}
                     </ng-container>
+                    <ng-container ></ng-container>
                 </div>
             </div>
         </ng-container>

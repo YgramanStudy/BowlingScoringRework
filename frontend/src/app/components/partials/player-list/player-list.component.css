@@ -38,10 +38,11 @@
 
 @media screen and (min-width: 768px) {
     .player_list {
-        width: 40vw;
+        width: 35vw;
         padding: 1.5vw;
         border-radius: 1vw;
-        height: 25vw;
+        height: 20vw;
+        overflow: auto;
     }
     
     .player_list_item {
