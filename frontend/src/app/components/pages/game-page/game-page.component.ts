@@ -97,7 +97,7 @@ export class GamePageComponent implements OnInit {
       }
     }
 
-    console.log(this.button_undisabling);
+    // console.log(this.button_undisabling);
   }
 
   button_logic(buttom_number:number){

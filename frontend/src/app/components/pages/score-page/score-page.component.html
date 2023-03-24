@@ -1,16 +1,16 @@
-<div>
-    <table style="width:100%">
+<div class="score_page_container">
+    <table class="table_component">
         <tr>
           <th>Place</th>
           <th>Name</th>
           <th>Score</th>
         </tr>
-        <div *ngFor="let player of players; let i = index">
-        <tr >
-          <td>{{i+1}}</td>
-          <td>{{player.name}}</td>
-          <td>{{player.score}}</td>
+        <!-- <div *ngFor="let player of players; let i = index"> -->
+        <tr *ngFor="let player of players; let i = index">
+          <td >{{i+1}}</td>
+          <td >{{player.name}}</td>
+          <td >{{player.score[player.score.length-1]}}</td>
         </tr>
-        </div>
+        <!-- </div> -->
       </table>
 </div>

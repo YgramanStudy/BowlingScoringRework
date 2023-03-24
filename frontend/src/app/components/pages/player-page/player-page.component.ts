@@ -50,14 +50,14 @@ export class PlayerPageComponent implements OnInit {
   }
 
   async getAllplayers(){
-    console.log("getAllplayers");
+    // console.log("getAllplayers");
     this.dataService.getAllPlayers().subscribe(players =>this.setId(this.players =players));
     // await this.dataService.getAllPlayers().then(ob =>{ ob.subscribe(players =>this.setId(this.players =players))});
     
   }
 
   addPlayer(newPlayerName: string){
-    console.log("addPlayer");
+    // console.log("addPlayer");
     let player=new Player(this.id++,newPlayerName)
     this.dataService.createNewPlayer(player).subscribe(players =>this.players =players);
   }

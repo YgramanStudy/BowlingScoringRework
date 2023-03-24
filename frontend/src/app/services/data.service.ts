@@ -52,7 +52,7 @@ export class DataService {
 
 
   deletePlayers():Observable<any>{
-    console.log("deletePlayers service")
+    // console.log("deletePlayers service")
     return this.http.delete<any>(DELETE_ALL_PLAYERS_URL).pipe(delay(10));   
   }
 
@@ -62,7 +62,7 @@ export class DataService {
   }
 
   getScore():Observable<Player[]>{
-    console.log("getScore service")
+    // console.log("getScore service")
     return this.http.get<Player[]>(GET_SCORE_URL);
     
 
