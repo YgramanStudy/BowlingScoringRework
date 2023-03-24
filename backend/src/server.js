@@ -57,7 +57,7 @@ function calc_score(player){
     for(var i=0;i<(player.resalt_table.length-1);i++){
         var local_sum=0;
         for(var j=0;j<((player.resalt_table[i].length));j++){
-            console.log(player.resalt_table[i])
+            // console.log(player.resalt_table[i])
             if(player.resalt_table[i][0]===''){
                 break;
             }
