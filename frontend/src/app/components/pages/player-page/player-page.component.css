@@ -1,0 +1,262 @@
+
+
+.game_page_container {
+    display: flex; 
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.create_user_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 5vw;
+}
+
+.create_user_title {
+    font-size: 7vw;
+    font-weight: bold;
+
+}
+
+.create_user_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    gap: 3vw;
+}
+
+.player_name_input {
+    font-size: 5vw;
+    padding: 3vw 0;
+    width: 80%;
+    border-radius: 10vw;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.create_user_submit_btn {
+    font-size: 5vw;
+    padding: 3vw;
+    width: 60%;
+    border-radius: 10vw;
+    text-align: center;
+    height: fit-content;
+    background: red;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.create_user_submit_btn:hover {
+    border: 1px solid red;
+    background: white;
+    color: red;
+}
+
+.game_page_player_list_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 5vw;
+}
+
+.game_page_start_game_btn {
+    font-size: 5vw;
+    border: none;
+    background: rgb(255,0,0);
+    background: linear-gradient(130deg, rgb(255,0,0) 15%, rgba(255,255,255,1) 50%, rgb(255,0,0) 85%);
+    padding: 3vw;
+    border-radius: 10vw;
+    cursor: pointer;
+    width: 51%;
+    height: fit-content;
+}
+
+.game_page_start_game_btn:hover {
+    background: rgb(224,1,1);
+    background: linear-gradient(230deg, rgba(224,1,1,1) 15%, rgba(255,255,255,1) 50%, rgba(224,1,1,1) 85%);
+}
+
+@media screen and (min-width: 768px) {
+    .game_page_container {
+        flex-direction: row;
+        height: calc(100% - 4.1vw);
+        width: 100%;
+        gap: 0;
+    }
+    
+    .create_user_container {
+        width: 45%;
+        gap: 2.5vw;
+    }
+    
+    .create_user_title {
+        font-size: 3.5vw;
+    }
+    
+    .create_user_form {
+        gap: 1.5vw;
+    }
+    
+    .player_name_input {
+        font-size: 2vw;
+        padding: 1vw 0;
+        width: 70%;
+        border-radius: 5vw;
+    }
+    
+    .create_user_submit_btn {
+        font-size: 2vw;
+        padding: 1vw;
+        border-radius: 5vw;
+    }
+
+    .game_page_player_list_container {
+        gap: 2.5vw;
+        width: 55%;
+    }
+    
+    .game_page_start_game_btn {
+        font-size: 2vw;
+        padding: 1vw;
+        border-radius: 5vw;
+        width: 42%;
+    }
+}
+
+
+.score_component{
+    background-color: rgb(134, 87, 29);
+    /* color: gold; */
+    width: 100%;
+    height: 50%;
+    
+
+}
+
+
+.table{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    
+    display: flex; 
+     flex-direction: column;
+     /* gap:2vw; */
+     border: 1px solid black;
+}
+
+.roww{
+    /* background-color: blue; */
+    /* height: 5vw;  */
+    /* height: auto; */
+    height: 15vw;
+     width: 5vw;
+    /* align-items: center;
+    justify-content: center; */
+    /* text-align: center; */
+    /* padding-left: 2vw; */
+    border-bottom: 1px solid black;
+}
+
+.first_row{
+    /* display: inline-block; */
+    height: 2vw;
+    
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+}
+
+.second_row{
+    display: flex;
+    flex-direction: row;
+    /* top: 50%; */
+    /* width: 5vw; */
+    height: 100%;
+    /* align-items: center;
+    justify-content: center; */
+    
+    /* text-align: center; */
+    /* gap: 1vw; */
+}
+
+.second_row_split{
+    display: flex;
+    /* position:initial; */
+    /* margin: 5%; */
+    width: 100%; 
+     width: 100%;
+    /* height: 100%; */
+     align-items: center;
+    justify-content: center; 
+    /* border:1px solid black; */
+    /* text-align: center; */
+    /* padding: 0.5vw; */
+    /* gap: 4vw; */
+
+}
+
+.extra_border{
+    border-left:1px solid black;
+    
+}
+
+.third_row{
+    height: 100%;
+    text-align: right;
+}
+
+.values{
+    display: flex;
+    /* width: 100%; */
+    position: relative;
+    /* height: 5%; */
+    align-items: center;
+    /* justify-content: center; */
+    padding: 5%;
+    gap: 1vw;
+
+}
+
+button{
+    width: 4vw;
+    height: 4vw;
+}
+
+
+.card{
+    width: 70%;
+    height: 10%;
+    background-color: salmon;
+    border-radius: 20%;
+    border: 1px solid black;
+    text-align: center;
+    /* padding: 5%; */
+    margin: 5%;
+    
+}
+
+ul li{
+    list-style-type: none;
+    
+}
+ul{
+    
+    height: 100%;
+    background-color: bisque;
+    /* justify-content: center; */
+    border-radius: 10%;
+}   

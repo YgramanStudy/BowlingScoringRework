@@ -1,1 +1,14 @@
-<p>player-list works!</p>
+<ul class="player_list">
+    <li class="player_list_item" *ngFor="let player of players">
+        <a (click)="updateCorentPlayer(player)">
+            <div class="card">  
+                <p class="player_id">
+                    Player {{player.id}}:
+                </p>
+                <p class="player_name">
+                    {{player.name}}
+                </p>
+            </div>
+        </a>
+    </li>
+</ul>

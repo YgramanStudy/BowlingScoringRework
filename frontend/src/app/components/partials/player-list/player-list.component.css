@@ -1,0 +1,66 @@
+.player_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    border: 1px solid #ccc;
+    padding: 5vw;
+    border-radius: 3vw;
+    height: 50vw;
+    overflow: auto;
+}
+
+.player_list_item {
+    font-size: 6vw;
+    list-style: none;
+    width: 100%;
+}
+
+.player_list_item:hover {
+    outline: 1px solid #ccc;
+    background: #f0eeee;
+    border-radius: 2vw;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+}
+
+.player_id {
+    font-size: 5vw;
+}
+
+.player_name {
+    font-size: 5vw;
+}
+
+@media screen and (min-width: 768px) {
+    .player_list {
+        width: 40vw;
+        padding: 1.5vw;
+        border-radius: 1vw;
+        height: 25vw;
+    }
+    
+    .player_list_item {
+        font-size: 2vw;
+    }
+    
+    .player_list_item:hover {
+        border-radius: 1vw;
+    }
+    
+    .card {
+        padding: 1.5vw;
+    }
+    
+    .player_id {
+        font-size: 2.5vw;
+    }
+    
+    .player_name {
+        font-size: 2.5vw;
+    }
+}

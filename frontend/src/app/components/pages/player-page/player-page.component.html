@@ -1,1 +1,19 @@
-<p>player-page works!</p>
+<div class="game_page_container">
+
+    <div class="create_user_container">
+        <h2 class="create_user_title">
+            Create new user 
+        </h2>
+        <form class="create_user_form" role="form">    
+                <input class="player_name_input" #text (keyup.enter)="addPlayer(text.value)" id="name" name="name" type="text" placeholder="*Player Name"/>
+            <button class="create_user_submit_btn" type="button" (click)="addPlayer(text.value)">Add</button>
+        </form>
+    </div>
+       
+    
+<div class="game_page_player_list_container">
+    <app-player-list [players]="players" ></app-player-list>
+
+    <button class="game_page_start_game_btn" routerLink="/start_page/player_page/game_page">start game </button>
+</div>
+</div>

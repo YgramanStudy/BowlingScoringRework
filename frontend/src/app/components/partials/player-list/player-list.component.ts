@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Player } from 'src/app/shared/models/player';
 
 @Component({
   selector: 'app-player-list',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player-list.component.css']
 })
 export class PlayerListComponent implements OnInit {
+  @Input() players:Player[]=[];
+  @Output("updateCorentPlayer") newItemEvent = new EventEmitter<Player>();
+  // current_player?:Player;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  updateCorentPlayer(value:Player){
+    this.newItemEvent.emit(value);
   }
 
 }

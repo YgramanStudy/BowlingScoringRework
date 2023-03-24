@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Player } from 'src/app/shared/models/player';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  players:Player[] =[];
+  constructor(private dataService:DataService,
+    private router: Router,
+    private activatedRoute:ActivatedRoute,) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  
+  startNewGame(){   
+    this.router.navigateByUrl('');   
   }
 
 }

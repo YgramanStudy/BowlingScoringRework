@@ -1,1 +1,16 @@
-<p>score-page works!</p>
+<div>
+    <table style="width:100%">
+        <tr>
+          <th>Place</th>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
+        <div *ngFor="let player of players; let i = index">
+        <tr >
+          <td>{{i+1}}</td>
+          <td>{{player.name}}</td>
+          <td>{{player.score}}</td>
+        </tr>
+        </div>
+      </table>
+</div>

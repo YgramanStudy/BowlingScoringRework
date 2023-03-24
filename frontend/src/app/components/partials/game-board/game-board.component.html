@@ -1,1 +1,17 @@
-<p>game-board works!</p>
+<div class="table">
+    <div class="column" *ngFor="let frame of current_player.resalt_table; let i = index">
+        <ng-container *ngIf="frame">
+            <div class="first_row roww">{{i+1}}</div>
+            <div class="second_row roww">
+                <div class="second_row_split" >{{frame[0]}}</div>
+                <div class="second_row_split extra_border">{{frame[1]}}</div>
+                <div class="second_row_split extra_border" *ngIf="frame[2]">
+                    <ng-container class="second_row_split" *ngIf="frame[2]">
+                        {{frame[2]}}
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
